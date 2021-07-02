@@ -5,19 +5,26 @@ html {
     height: 100%;
     background-color: #FFFFFF;
 }
-
+body{
+  display:flex;
+  flex-direction: column;
+}
 .icon {color: #BCD2DA;}
 
 .card {
-    /* display, flex-direction */
+    display:flex;
+    flex-direction:column;
     border: 1px solid #CAD0D2;
     border-radius: 4px;
     overflow: hidden;
 }
 
 .card__description {
-    /* display, flex-direction, justify-content, align-items */
-    padding: 15px 0;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items :center;
+  padding: 15px 0;
 }
 
 .card__descriptionIcon {font-size: 32px; margin-bottom: 10px;}
@@ -40,24 +47,38 @@ html {
 }
 
 .cardGroup {
-    /* display */
-  
-    border: 1px solid #CAD0D2;
+    width: 710px;
+    display:flex;
+    align-self:center;
+    border:1px solid #CAD0D2;
     border-radius: 4px;
-    overflow: hidden;
+    overflow:hidden;
+    justify-content:center;
   }
   
     .cardGroup__card {
-      /* flex-grow, flex-shrink, flex-basis */
-  
+      flex-grow:1;
+      flex-shrink:0;
+      flex-basis:1px;
       border: none;
       border-radius: 0;
+      align-content: center;
     }
   
     .cardGroup__card {
       border-left: 1px solid #D7DBDD;
+      
     }
   
     .cardGroup__cardDescription {
-      /* flex-grow, flex-shrink, flex-basis */
+      flex-grow:1;
+      flex-shrink:1;
+      flex-basis :1;
+    }
+    @media (min-width: 320px) and (max-width:900px){
+
+    
+      .cardGroup{
+       max-width: 320px;
+      }
     }
